@@ -33,7 +33,7 @@ wss.on("connection", (socket) => {
 
                 if(roomSockets) {
                     roomSockets.forEach((client : WebSocket) => {
-                        if(client.readyState === WebSocket.OPEN) {
+                        if(client !== socket && client.readyState === WebSocket.OPEN) {
                         client.send(chatMessage);
                     }
                 })
