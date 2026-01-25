@@ -5,8 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsc -b && node ./dist/index.js"
-  },
+  "build": "tsc -b",
+  "start": "node dist/index.js",
+  "dev": "tsc -b && node ./dist/index.js"
+}
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rajtejaswee/chat-app.git"
